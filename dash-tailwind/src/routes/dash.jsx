@@ -1,4 +1,5 @@
 import Navbar from "../assets/navbar"
+import Charts from "../assets/charts";
 import {  useEffect, useState } from "react"
 
 
@@ -58,7 +59,7 @@ function Dash() {
       </div>
       
       <div className=" text-gray-700 shadow-md rounded-lg bg-clip-border mx-auto w-screen sm:w-8/10 mt-7 mb-7">
-      <div>Charts</div>
+      <Charts />
        
       <table className="w-full text-left bg-white dark:bg-black dark:text-white rounded-xl  text-slate-800 shadow-2xs">
         <thead>
