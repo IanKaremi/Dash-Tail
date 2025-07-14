@@ -60,9 +60,9 @@ function Dash() {
       <div className=" text-gray-700 shadow-md rounded-lg bg-clip-border mx-auto w-screen sm:w-8/10 mt-7 mb-7">
 
        
-      <table className="w-full text-left bg-white rounded-xl  text-slate-800 shadow-2xs">
+      <table className="w-full text-left bg-white dark:bg-black dark:text-white rounded-xl  text-slate-800 shadow-2xs">
         <thead>
-          <tr class="text-slate-500 border-b border-slate-300 bg-slate-50">
+          <tr class="text-slate-500 dark:text-slate-50 border-b border-slate-300 bg-slate-50 dark:bg-slate-950">
                 <th scope="col" class="sm:p-4">
                   <span class="text-sm leading-none font-normal">
                     Name

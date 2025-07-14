@@ -9,7 +9,7 @@ function Navbar() {
   }
   return (
     <>
-      <nav className="border-b border-b-gray-950 p-4 w-full bg-white font-semibold sm:overflow-x-hidden hidden sm:block">
+      <nav className="border-b border-b-gray-950 p-4 w-full bg-white font-semibold sm:overflow-x-hidden hidden sm:block dark:bg-black">
           <ol className="flex space-x-4 items-start mx-4">
               <li className="w-full text-left text-xl italic  text-green-400">MyCompany</li>
               <li>Dashboard</li>
@@ -19,7 +19,7 @@ function Navbar() {
           </ol>
       </nav>
       
-      <nav className="shadow-md  w-full bg-white font-semibold sm:overflow-x-hidden sm:hidden block">
+      <nav className="shadow-md  w-full bg-white font-semibold sm:overflow-x-hidden sm:hidden block dark:bg-black">
           <div className="flex space-x-4 mx-4  items-center">
               <div className='w-[15px] m-0'><button onClick={handleDropdown}>{open ? "x" : "="}</button></div>
               <div className="w-full text-xl italic  text-green-400">MyCompany
