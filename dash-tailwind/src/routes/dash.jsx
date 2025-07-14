@@ -37,7 +37,7 @@ function Dash() {
     )
     return (
       data.results.map((user,key)=>
-        <tr key={key} className="hover:bg-slate-200 text-sm">
+        <tr key={key} className="hover:bg-slate-200 dark:hover:bg-slate-500 text-sm">
           <th className="sm:p-4">{user.name.title} {user.name.first} {user.name.last}</th>
           <td className="">{user.email}</td>
           <td>{user.cell}</td>
@@ -58,7 +58,7 @@ function Dash() {
       </div>
       
       <div className=" text-gray-700 shadow-md rounded-lg bg-clip-border mx-auto w-screen sm:w-8/10 mt-7 mb-7">
-
+      <div>Charts</div>
        
       <table className="w-full text-left bg-white dark:bg-black dark:text-white rounded-xl  text-slate-800 shadow-2xs">
         <thead>
