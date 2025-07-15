@@ -1,39 +1,30 @@
-import { Pie, PieChart, Tooltip, Cell } from 'recharts'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 
-function Charts({ M, F }){
+export default function Gen({M , F}){
+    const data ={
+    labels: ['Male','Female'],
+    datasets:[
+        {
+            label: "Population",
+            data:[M,F],
+            backgroundColor:[
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
 
-    let data = [
-        {name:'Male', value: M},
-        {name:'Female', value: F},
-
+            ],
+            borderWidth: 1,
+        }
     ]
-
-    return(
-    <>
-    <PieChart width={200} height={200}>
-        <Pie
-            dataKey="value"
-            isAnimationActive={true}
-            data={data}
-            cx="50%"
-            cy="50%"
-            innerRadius={40}
-            outerRadius={70}
-            
-            fill="#8884d8"
-            label
-        
-       />
-        <Tooltip/>
-    </PieChart>
-   
-    
-    
-    
-    </>
-    )
 }
 
-export default Charts;
+
+    return <Pie data={data} />
+}

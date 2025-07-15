@@ -1,7 +1,8 @@
 import Navbar from "../assets/navbar"
-import Charts from "../assets/gender-charts";
-import Age from "../assets/age-chart";
+import Gen from "../assets/gender-charts"
 import { useEffect, useState } from "react"
+
+
 
 
 function Dash() {
@@ -62,7 +63,7 @@ function Dash() {
 
   }
 
- 
+
 
   return (
     <>
@@ -74,14 +75,16 @@ function Dash() {
       
       <div className=" text-gray-700 shadow-md rounded-lg bg-clip-border mx-auto w-screen sm:w-8/10 mt-7 mb-7">
       
-        <div className="flex h-48 w-6">
+        <div className="flex h-48 w-6 gap-2"> {/*Container for charts*/}
           <div className="bg-violet-200  dark:bg-slate-900 flex p-2 items-center">
             <p className="text-black dark:text-white text-2xl font-bold text-left">Gender Split</p>
-            <Charts M={male} F={female} />
+            <Gen M={male} F={female}/>
+            
           </div>
 
-          <div>
-            Chart 2
+          <div className="bg-green-200  dark:bg-slate-900 flex p-2 items-center">
+            <p className="text-black dark:text-white text-2xl font-bold text-left">Age Ranges</p>
+            
           </div>
 
 
