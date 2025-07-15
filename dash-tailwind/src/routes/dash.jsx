@@ -1,10 +1,12 @@
 import Navbar from "../assets/navbar"
 import Charts from "../assets/charts";
-import {  useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 
 function Dash() {
   const[ data, setData ] = useState(null);
+  const[ male, setMale ] = useState(0);
+  const[ female, setFemale ] = useState(0);
 
 
   useEffect(() => {
@@ -15,6 +17,15 @@ function Dash() {
         const result = await response.json()
         setData(result);// save to state
         console.log(result);
+
+        let m = 0;
+        let f = 0;
+        result.results.forEach(user =>{
+          if(user.gender === "male") m++;
+          else if (user.gender === "female") f++;
+        });
+        setMale(m);
+        setFemale(f);
 
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -50,6 +61,8 @@ function Dash() {
 
   }
 
+ 
+
   return (
     <>
       <Navbar />
@@ -59,7 +72,20 @@ function Dash() {
       </div>
       
       <div className=" text-gray-700 shadow-md rounded-lg bg-clip-border mx-auto w-screen sm:w-8/10 mt-7 mb-7">
-      <Charts />
+      
+        <div className="flex h-48 w-6">
+          <div className="bg-violet-200  dark:bg-slate-900 rounded-2xl flex p-2 items-center">
+            <p className="text-black dark:text-white text-2xl font-bold text-left">Gender Split</p>
+            <Charts M={male} F={female} />
+          </div>
+
+          <div>
+            Chart 2
+          </div>
+
+
+        </div>
+        
        
       <table className="w-full text-left bg-white dark:bg-black dark:text-white rounded-xl  text-slate-800 shadow-2xs">
         <thead>
