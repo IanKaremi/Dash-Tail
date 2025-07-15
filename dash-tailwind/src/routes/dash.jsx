@@ -1,5 +1,6 @@
 import Navbar from "../assets/navbar"
-import Charts from "../assets/charts";
+import Charts from "../assets/gender-charts";
+import Age from "../assets/age-chart";
 import { useEffect, useState } from "react"
 
 
@@ -74,7 +75,7 @@ function Dash() {
       <div className=" text-gray-700 shadow-md rounded-lg bg-clip-border mx-auto w-screen sm:w-8/10 mt-7 mb-7">
       
         <div className="flex h-48 w-6">
-          <div className="bg-violet-200  dark:bg-slate-900 rounded-2xl flex p-2 items-center">
+          <div className="bg-violet-200  dark:bg-slate-900 flex p-2 items-center">
             <p className="text-black dark:text-white text-2xl font-bold text-left">Gender Split</p>
             <Charts M={male} F={female} />
           </div>
@@ -90,25 +91,25 @@ function Dash() {
       <table className="w-full text-left bg-white dark:bg-black dark:text-white rounded-xl  text-slate-800 shadow-2xs">
         <thead>
           <tr class="text-slate-500 dark:text-slate-50 border-b border-slate-300 bg-slate-50 dark:bg-slate-950">
-                <th scope="col" class="sm:p-4">
+                <th scope="col" className="sm:p-4">
                   <span class="text-sm leading-none font-normal">
                     Name
                   </span>
                 </th>
 
-                <th scope="col" class="sm:p-4">
+                <th scope="col" className="sm:p-4">
                   <span class="text-sm leading-none font-normal">
                     Email
                   </span>
                 </th>
 
-                 <th scope="col" class="sm:p-4">
+                 <th scope="col" className="sm:p-4">
                   <span class="text-sm leading-none font-normal">
                     Cell No.
                   </span>
                 </th>
 
-                 <th scope="col" class="sm:p-4">
+                 <th scope="col" className="sm:p-4">
                   <span class="text-sm leading-none font-normal">
                     Mobile No.
                   </span>
